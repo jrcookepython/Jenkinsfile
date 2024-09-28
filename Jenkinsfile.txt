@@ -1,0 +1,8 @@
+node {
+	stage('Build') {
+	git branch: 'main', credentialsId: 'devops-github', url: 'https://github.com/jrcookepython/seleniumauto2'
+	}
+	stage('test'){
+		echo 'Run unit test
+	}
+}
