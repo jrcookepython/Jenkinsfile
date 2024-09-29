@@ -1,6 +1,6 @@
 node {
 	stage('Build') {
-	git branch: 'main', credentialsId: 'devops-github', url: 'https://github.com/jrcookepython/seleniumauto2'
+		dotnetBuild project: 'https://github.com/jrcookepython/Jenkinsfile.git', sdk: 'dotnet6'	
 	}
 	stage('test'){
 		echo 'Run unit test
