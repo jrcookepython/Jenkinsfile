@@ -1,4 +1,7 @@
 node {
+	stage('Git'){
+		checkout scm
+	}
 	stage('Build') {
 		dotnetBuild project: 'https://github.com/jrcookepython/Jenkinsfile.git', sdk: 'dotnet6'	
 	}
